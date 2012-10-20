@@ -59,7 +59,8 @@
 #define SSH_CHANNEL_UNIX_LISTENER	18	/* Listening on a domain socket. */
 #define SSH_CHANNEL_RUNIX_LISTENER	19	/* Listening to a R-style domain socket. */
 #define SSH_CHANNEL_MUX_PROXY		20	/* proxy channel for mux-slave */
-#define SSH_CHANNEL_MAX_TYPE		21
+#define SSH_CHANNEL_RDYNAMIC		21	/* reversed SSH_CHANNEL_DYNAMIC */
+#define SSH_CHANNEL_MAX_TYPE		22
 
 #define CHANNEL_CANCEL_PORT_STATIC	-1
 

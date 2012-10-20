@@ -879,7 +879,8 @@ main(int ac, char **av)
 			break;
 
 		case 'R':
-			if (parse_forward(&fwd, optarg, 0, 1)) {
+			if (parse_forward(&fwd, optarg, 1, 1) ||
+				parse_forward(&fwd, optarg, 0, 1)) {
 				add_remote_forward(&options, &fwd);
 			} else {
 				fprintf(stderr,
