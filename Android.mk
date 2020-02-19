@@ -141,7 +141,7 @@ ifneq (,$(SSHDIR))
 LOCAL_CFLAGS += -DSSHDIR=\"$(SSHDIR)\"
 endif
 
-include $(BUILD_SHARED_LIBRARY)
+include $(BUILD_STATIC_LIBRARY)
 
 ###################### ssh ######################
 
@@ -172,7 +172,8 @@ LOCAL_C_INCLUDES := \
     external/openssl/include \
     external/openssh/openbsd-compat
 
-LOCAL_SHARED_LIBRARIES += libssh libssl libcrypto libdl libz
+LOCAL_STATIC_LIBRARIES += libssh
+LOCAL_SHARED_LIBRARIES += libssl libcrypto libdl libz
 
 include $(BUILD_EXECUTABLE)
 
@@ -194,7 +195,8 @@ LOCAL_C_INCLUDES := \
     external/openssl/include \
     external/openssh/openbsd-compat
 
-LOCAL_SHARED_LIBRARIES += libssh libssl libcrypto libdl libz
+LOCAL_STATIC_LIBRARIES += libssh
+LOCAL_SHARED_LIBRARIES += libssl libcrypto libdl libz
 
 include $(BUILD_EXECUTABLE)
 
@@ -216,7 +218,8 @@ LOCAL_C_INCLUDES := \
     external/openssl/include \
     external/openssh/openbsd-compat
 
-LOCAL_SHARED_LIBRARIES += libssh libssl libcrypto libdl libz
+LOCAL_STATIC_LIBRARIES += libssh
+LOCAL_SHARED_LIBRARIES += libssl libcrypto libdl libz
 
 include $(BUILD_EXECUTABLE)
 
@@ -281,7 +284,8 @@ LOCAL_C_INCLUDES := \
     external/openssl/include \
     external/openssh/openbsd-compat
 
-LOCAL_SHARED_LIBRARIES += libssh libssl libcrypto libdl libz libcutils
+LOCAL_STATIC_LIBRARIES += libssh
+LOCAL_SHARED_LIBRARIES += libssl libcrypto libdl libz libcutils
 
 include $(BUILD_EXECUTABLE)
 
@@ -303,7 +307,8 @@ LOCAL_C_INCLUDES := \
     external/openssl/include \
     external/openssh/openbsd-compat
 
-LOCAL_SHARED_LIBRARIES += libssh libssl libcrypto libdl libz
+LOCAL_STATIC_LIBRARIES += libssh
+LOCAL_SHARED_LIBRARIES += libssl libcrypto libdl libz
 
 include $(BUILD_EXECUTABLE)
 
